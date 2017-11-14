@@ -34,8 +34,8 @@ router.post('/message', function(req, res, next) {
 });
 
 router.get('/message/:person', function(req, res) {
-
-        Message.collection.distinct(req.person, function(err, results) {
+	console.log(req.param("person") + " this is the person");
+        Message.find({'User':req.param("person")}, function(err, results) {
                 if (err) return console.error(err);
                 console.log(results);
                 res.json(results);
@@ -43,7 +43,6 @@ router.get('/message/:person', function(req, res) {
 
 
 });
-
 
 
 module.exports = router;
