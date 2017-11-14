@@ -23,5 +23,7 @@
 	margin-right: auto;
 	text-align: center;
 	width: 600px;
-
+	border: 2px #2ae21d;
+	background-color: black;
+	color: #2ae21d;
 }
