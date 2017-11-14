@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 <head>
-	<title>Insecure Messaging</title>
+    <title>Insecure Messaging</title>
 
-	<!-- STYLESHEETS -->
-	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
 
 <body>
-	<div class="container">
-		<div class="title-holder">
-			<div class="text-center title">Insecure Messaging</div>
-		</div>
+<div class="container">
+    <div class="title-holder">
+        <div class="text-center title">Insecure Messaging</div>
+    </div>
+</div>
 
-		<div class="login-holder">
-			<div class="form-group">
-				<label for="login">User:</label>
-				<input type="text" class="form-control" id="login">
-			</div>
-		</div>
-	</div>
-	
+
+<div class="container">
+    <div ng-view></div>
+</div>
+
+
+
+<!-- Javascripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/routes.js"></script>
+<script src="javascripts/LoginController.js"></script>
+<script src="javascripts/LoginService.js"></script>
+<script src="javascripts/MessageController.js"></script>
+
 </body>
 </html>

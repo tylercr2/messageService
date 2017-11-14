@@ -1,4 +1,4 @@
-(angular.module('app').controller('loginCtrl', ['loginService', function(loginService) {
+(angular.module('app').controller('loginCtrl', ['loginService', '$scope', function(loginService, $scope) {
 
     var rtn = this;
 
