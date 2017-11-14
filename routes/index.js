@@ -6,7 +6,8 @@ mongoose.connect('mongodb://localhost/messageService', { useMongoClient: true});
 
 var messageSchema = mongoose.Schema({
         User: String,
-        Message: String
+        Subject: String,
+	Message: String
 });
 
 var Message = mongoose.model('Message', messageSchema);
