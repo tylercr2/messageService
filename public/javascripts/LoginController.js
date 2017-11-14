@@ -2,7 +2,7 @@
 
     var rtn = this;
 
-    scope.login = function (user) {
+    $scope.login = function (user) {
         if(!loginService.loginUser(user)) {
             console.log("Error logging in");
         }
