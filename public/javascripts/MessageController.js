@@ -1,4 +1,4 @@
-(angular.module('app').controller('messageCtrl', ['loginService', '$scope', '$http', function(loginService, $scope, $http) {
+(angular.module('app').controller('messageCtrl', ['loginService', '$scope', '$http', '$location', function(loginService, $scope, $http, $location) {
 
     var rtn = this;
 
@@ -20,6 +20,14 @@
             }
         });
     }
+
+    $scope.checkLogin = function() {
+        if(!loginService.getUser()) {
+            $location.path("/login");
+        }
+    }
+
+    $scope.checkLogin();
 
     $scope.getMessages(loginService.getUser());
 
