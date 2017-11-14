@@ -1,0 +1,17 @@
+.title-holder {
+	padding: 2rem;
+	font-family: "Source Code Pro";
+}	
+
+.title-holder .title {
+	color: #2ae21d; /* HACKER GREEN */	
+	font-size: 3rem;
+}
+
+.login-holder {
+	padding: 1.75rem;
+
+	background-color: #6a7272; 
+	border-radius: 1.5rem;
+	color: black;
+}
