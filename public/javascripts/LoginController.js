@@ -1,13 +1,14 @@
-(angular.module('app').controller('loginCtrl', ['loginService', '$scope', function(loginService, $scope) {
+(angular.module('app').controller('loginCtrl', ['loginService', '$scope', '$location', function(loginService, $scope, $location) {
 
     var rtn = this;
 
-    $scope.login = function (user) {
+    $scope.login = function () {
+        var user = $("#login").val();
         if(!loginService.loginUser(user)) {
             console.log("Error logging in");
         }
         else {
-            // redirect to message view
+            $location.path('/messages');
         }
     }
 

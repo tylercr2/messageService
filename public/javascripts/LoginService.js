@@ -5,6 +5,7 @@ angular.module('app').factory('loginService', function() {
     function login(user) {
         if(user) {
             rtn.user = user;
+            return true;
         }
 
         return false;
