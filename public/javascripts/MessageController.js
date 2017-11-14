@@ -3,14 +3,14 @@
     var rtn = this;
 
     $scope.getMessages = function(user) {
-        var route = '/message/' + user;
+        var route = 'message/' + user;
         $http.get(route).then(function (resp) {
-            rtn.messages = resp;
+            rtn.messages = resp.data;
         });
     }
 
     $scope.postMessage = function(message) {
-        var route = '/message';
+        var route = 'message';
         $.ajax({
             url: route,
             type: 'POST',
