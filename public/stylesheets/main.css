@@ -10,8 +10,20 @@
 
 .login-holder {
 	padding: 1.75rem;
-
+	width: 800px;
 	background-color: #6a7272; 
 	border-radius: 1.5rem;
 	color: black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#login {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 600px;
+	border: 2px #2ae21d;
+	background-color: black;
+	color: #2ae21d;
 }

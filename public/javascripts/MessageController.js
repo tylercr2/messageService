@@ -1,16 +1,16 @@
-(angular.module('app').controller('messageCtrl', ['loginService', '$scope', '$http', function(loginService, $scope, $http) {
+(angular.module('app').controller('messageCtrl', ['loginService', '$scope', '$http', '$location', function(loginService, $scope, $http, $location) {
 
     var rtn = this;
 
     $scope.getMessages = function(user) {
-        var route = '/message/' + user;
+        var route = 'message/' + user;
         $http.get(route).then(function (resp) {
-            rtn.messages = resp;
+            rtn.messages = resp.data;
         });
     }
 
     $scope.postMessage = function(message) {
-        var route = '/message';
+        var route = 'message';
         $.ajax({
             url: route,
             type: 'POST',
@@ -20,6 +20,14 @@
             }
         });
     }
+
+    $scope.checkLogin = function() {
+        if(!loginService.getUser()) {
+            $location.path("/login");
+        }
+    }
+
+    $scope.checkLogin();
 
     $scope.getMessages(loginService.getUser());
 
