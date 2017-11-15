@@ -1,34 +1,40 @@
 .input-row {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .input-label {
-	margin-right: 1rem;
+    margin-right: 1rem;
 }
 
 .item-stack {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .item-stack > .stack-item:not(:last-child) {
-	margin-bottom: 1rem;	
+    margin-bottom: 1rem;
 }
 
 .hacker-divider {
-	border: 1px dashed green;
-	margin: 2rem 0rem;
+    border: 1px dashed green;
+    margin: 2rem 0rem;
 }
 
 .message-mini {
-	background-color: green;
-	color: black;
-	padding: 0.5rem;
-	margin: 0.2rem;
+    background-color: green;
+    color: black;
+    padding: 0.5rem;
+    margin: 0.2rem;
 }
 
 .message-mini:hover {
-	background-color: #00af00;
-	cursor: pointer;
+    background-color: #00af00;
+    cursor: pointer;
+}
+
+#logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
