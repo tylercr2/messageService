@@ -2,3 +2,11 @@ body {
 	font-family: "Source Code Pro" !important;
 	color: #2ae21d; /* HACKER GREEN */
 }
+
+.hacker-input {
+    border: 1px solid #2ae21d;
+    background-color: black;
+    color: #2ae21d;
+	padding: 0rem 0.2rem;
+}
+

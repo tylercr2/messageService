@@ -1,6 +1,33 @@
-<div class="compose-holder">
-	<input type="textarea">
+<!-- SECTION TO COMPOSE A NEW MESSAGE -->
+<div class="compose-holder item-stack">
+
+	<!-- toggle bar for composing -->
+	<div class="message-mini" ng-click="showCompose = !showCompose">
+		Write new message
+	</div>	
+
+	<!-- inputs for new message -->
+	<div class="item-stack" ng-show="showCompose">
+		<div class="input-row stack-item">
+			<span class="input-label">To: </span>
+			<input type="text" class="hacker-input">
+		</div>
+		<div class="input-row stack-item">
+			<span class="input-label">Subject: </span>
+			<input type="text" class="hacker-input">
+		</div>
+		<div class="input-row stack-item">
+			<div class="input-label">Message:</div><br>
+			<textarea class="hacker-input" cols=100 rows=5></textarea>
+		</div>
+		<div class="send-holder stack-item">
+			<div id="send-button" class="hacker-button">Send</div>
+		</div>
+	</div>
+
 </div>
+
+<div class="hacker-divider">
 
 <div class="message-holder">
     <div class="message-mini" ng-repeat="message in messageCtrl.messages">
