@@ -50,6 +50,10 @@
 	$scope.hasMessages = function() {
 		return !!rtn.messages && rtn.messages.length != 0;
 	}
+
+	$scope.getUser = function() {
+		return loginService.getUser()
+	}
 	
 	$scope.toggleMessage = function (index) {
         if(rtn.selectedMessage == index) {

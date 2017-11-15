@@ -1,3 +1,5 @@
+<div>Logged in as {{ getUser() }}</div>
+
 <!-- SECTION TO COMPOSE A NEW MESSAGE -->
 <div class="compose-holder item-stack">
 
@@ -29,15 +31,18 @@
 
 <div class="hacker-divider"></div>
 
-<div class="message-holder">
+<div>
     <div ng-show="!hasMessages()">No messages</div>
-    <div class="message-mini" ng-repeat="message in messageCtrl.messages" ng-click="toggleMessage($index)">
-        Subject: {{ message.Subject }}
-        <div class="show-message" ng-show="messageShowing($index)">
-            {{ message.Message }}
-        </div>
-    </div>
+	<div ng-repeat="m in messageCtrl.messages">
+		<div class="message-mini" ng-click="toggleMessage($index)">
+			{{ m.Subject }}
+		</div>
+		<div class="show-message message-holder" ng-show="messageShowing($index)">
+			<pre>{{ m.Message }}</pre>
+		</div>
+	</div>
 </div>
 
-
-<div id="logout-btn" class="hacker-button" ng-click="logout()">Logout</div>
+<div id="logout-holder">
+	<div class="hacker-button" ng-click="logout()">Logout</div>
+</div>
