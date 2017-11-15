@@ -52,7 +52,12 @@
 	}
 	
 	$scope.toggleMessage = function (index) {
-        rtn.selectedMessage = index;
+        if(rtn.selectedMessage == index) {
+            rtn.selectedMessage = -1;
+        }
+        else {
+            rtn.selectedMessage = index;
+        }
     }
     
     $scope.messageShowing = function (index) {
