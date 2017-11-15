@@ -27,6 +27,10 @@
         });
 
         $scope.getMessages(loginService.getUser());
+
+        $scope.sendTo = '';
+        $scope.subject = '';
+        $scope.message = '';
     }
 
     $scope.checkLogin = function() {
@@ -49,5 +53,8 @@
 
     $scope.getMessages(loginService.getUser());
 
+    setInterval(function () {
+        $scope.getMessages(loginService.getUser());
+    }, 5000);
 
 }]));
