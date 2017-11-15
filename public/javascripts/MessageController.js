@@ -44,6 +44,11 @@
         $location.path("/login");
     }
 
+	// checks whether the user has any messages or not
+	$scope.hasMessages = function() {
+		return rtn.messages != undefined && rtn.messages.length != 0;
+	}
+
     $scope.checkLogin();
 
     $scope.getMessages(loginService.getUser());
