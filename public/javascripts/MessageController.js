@@ -42,7 +42,7 @@
 
 	// checks whether the user has any messages or not
 	$scope.hasMessages = function() {
-		return rtn.messages != undefined && rtn.messages.length != 0;
+		return !!rtn.messages && rtn.messages.length != 0;
 	}
 
     $scope.checkLogin();
