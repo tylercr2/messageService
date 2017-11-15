@@ -9,7 +9,13 @@
         });
     }
 
-    $scope.postMessage = function(message) {
+    $scope.postMessage = function() {
+        var message = {
+            User: $scope.sendTo,
+            Subject: $scope.subject,
+            Message: $scope.message
+        }
+
         var route = 'message';
         $.ajax({
             url: route,
