@@ -25,12 +25,19 @@
                 console.log("Status: ", textStatus);
             }
         });
+
+        $scope.getMessages(loginService.getUser());
     }
 
     $scope.checkLogin = function() {
         if(!loginService.getUser()) {
             $location.path("/login");
         }
+    }
+
+    $scope.logout = function () {
+        loginService.logout();
+        $location.path("/login");
     }
 
     $scope.checkLogin();

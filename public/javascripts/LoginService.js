@@ -19,6 +19,10 @@ angular.module('app').factory('loginService', function() {
 
         getUser: function() {
             return rtn.user;
+        },
+
+        logout: function () {
+            rtn.user = '';
         }
     }
 
