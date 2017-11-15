@@ -2,6 +2,8 @@
 
     var rtn = this;
 
+    rtn.selectedMessage = -1;
+
     $scope.getMessages = function(user) {
         var route = 'message/' + user;
         $http.get(route).then(function (resp) {
@@ -48,6 +50,14 @@
 	$scope.hasMessages = function() {
 		return !!rtn.messages && rtn.messages.length != 0;
 	}
+	
+	$scope.toggleMessage = function (index) {
+        rtn.selectedMessage = index;
+    }
+    
+    $scope.messageShowing = function (index) {
+        return index === rtn.selectedMessage;
+    }
 
     $scope.checkLogin();
 
