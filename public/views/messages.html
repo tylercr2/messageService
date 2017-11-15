@@ -3,7 +3,7 @@
 
     <!-- toggle bar for composing -->
     <div class="message-mini" ng-click="showCompose = !showCompose">
-        Write new message
+        Write message
     </div>
 
     <!-- inputs for new message -->
@@ -30,6 +30,7 @@
 <div class="hacker-divider"></div>
 
 <div class="message-holder">
+	<div ng-show="messageCtrl.messages">No messages</div>
     <div class="message-mini" ng-repeat="message in messageCtrl.messages">
         {{ message }}
     </div>
