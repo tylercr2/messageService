@@ -1,29 +1,4 @@
-.title-holder {
-	padding: 2rem;
-	font-family: "Source Code Pro";
-}	
-
-.title-holder .title {
-	color: #2ae21d; /* HACKER GREEN */	
-	font-size: 3rem;
-}
-
-.login-holder {
-	padding: 1.75rem;
-	width: 800px;
-	background-color: #6a7272; 
-	border-radius: 1.5rem;
-	color: black;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#login {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	width: 600px;
-	border: 2px #2ae21d;
-	background-color: black;
-	color: #2ae21d;
+body {
+	font-family: "Source Code Pro" !important;
+	color: #2ae21d; /* HACKER GREEN */
 }
