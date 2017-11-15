@@ -1,6 +1,7 @@
 body {
 	font-family: "Source Code Pro" !important;
 	color: #2ae21d; /* HACKER GREEN */
+	user-select: none;
 }
 
 .hacker-input {
