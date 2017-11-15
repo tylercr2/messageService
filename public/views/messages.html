@@ -30,11 +30,12 @@
 <div class="hacker-divider"></div>
 
 <div class="message-holder">
-	<div ng-show="!hasMessages()">No messages</div>
+    <div ng-show="!hasMessages()">No messages</div>
     <div class="message-mini" ng-repeat="message in messageCtrl.messages" ng-click="toggleMessage($index)">
-         <div class="show-message" ng-show="messageShowing($index)">
-	 	{{ message.Subject }}
-	 </div>
+        Subject: {{ message.Subject }}
+        <div class="show-message" ng-show="messageShowing($index)">
+            {{ message.Message }}
+        </div>
     </div>
 </div>
 
