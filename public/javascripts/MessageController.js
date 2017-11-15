@@ -48,6 +48,10 @@
 	$scope.hasMessages = function() {
 		return !!rtn.messages && rtn.messages.length != 0;
 	}
+	
+	$scope.toggleMessage = function (index) {
+        
+    }
 
     $scope.checkLogin();
 
