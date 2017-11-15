@@ -1,3 +1,11 @@
+<div class="send-message">
+        <form id="sendMessageForm" action="">
+        <input type="text" id="sendUser" placeholder="User"><br>
+        <input type="text" id="sendSubject" placeholder="Subject"><br>
+        <textarea rows="6" cols="100" id="sendMessage">Message</textarea>
+	<button id="sendButton" ng-click="postMessage()">Send</button>
+        </form>
+</div>
 <div class="message-holder">
     <div class="message-mini" ng-repeat="message in messageCtrl.messages">
         {{ message }}

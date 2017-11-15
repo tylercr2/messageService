@@ -9,8 +9,10 @@
         });
     }
 
-    $scope.postMessage = function(message) {
-        var route = 'message';
+    $scope.postMessage = function() {
+        var message = {"User":$("#sendUser").val(), "Subject":$("#sendSubject").val(), "Message":$("#sendMessage").val()}
+	console.log(message);	
+	var route = 'message';
         $.ajax({
             url: route,
             type: 'POST',
