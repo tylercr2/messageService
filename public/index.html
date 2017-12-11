@@ -3,6 +3,8 @@
 <head>
     <title>Insecure Messaging</title>
 
+    <meta charset="UTF-8">
+
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
@@ -14,7 +16,7 @@
 <body>
 <div class="container">
     <div class="title-holder">
-        <div class="text-center title">Insecure Messaging</div>
+        <div class="text-center title">Less Secure Messaging</div>
     </div>
 </div>
 
@@ -34,6 +36,21 @@
 <script src="javascripts/LoginController.js"></script>
 <script src="javascripts/LoginService.js"></script>
 <script src="javascripts/MessageController.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDeZJRB57jk3bbfdzcUoGRD3Iy5CHjJwU4",
+        authDomain: "lessmessaging.firebaseapp.com",
+        databaseURL: "https://lessmessaging.firebaseio.com",
+        projectId: "lessmessaging",
+        storageBucket: "",
+        messagingSenderId: "959547504814"
+    };
+    firebase.initializeApp(config);
+</script>
 
 </body>
 </html>

@@ -4,6 +4,8 @@
 
     rtn.selectedMessage = -1;
 
+    console.log("Message controller");
+
     $scope.getMessages = function(user) {
         var route = 'message/' + user;
         $http.get(route).then(function (resp) {
@@ -36,6 +38,8 @@
     }
 
     $scope.checkLogin = function() {
+        console.log("Checking login");
+        console.log("User: ", loginService.getUser().displayName);
         if(!loginService.getUser()) {
             $location.path("/login");
         }
@@ -54,6 +58,10 @@
 	$scope.getUser = function() {
 		return loginService.getUser()
 	}
+
+    $scope.getUserDisplayName = function() {
+        return loginService.getUser().displayName;
+    }
 	
 	$scope.toggleMessage = function (index) {
         if(rtn.selectedMessage == index) {

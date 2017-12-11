@@ -1,4 +1,4 @@
-<div class="login-holder">
-    <input id="login" class="hacker-input" type="text">
-	<div class="hacker-button" ng-click="login()">Login</div>
+<div class="login-holder" ng-init="initApp()">
+    <!-- Button that handles sign-in/sign-out -->
+    <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" ng-click="toggleSignIn()">Sign in with GitHub</button>
 </div>
