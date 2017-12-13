@@ -1,4 +1,4 @@
-(angular.module('app').controller('loginCtrl', ['loginService', '$scope', '$location', function(loginService, $scope, $location) {
+(angular.module('app').controller('loginCtrl', ['loginService', '$scope', '$location', '$window', function(loginService, $scope, $location, $window) {
 
     var rtn = this;
 
@@ -95,10 +95,9 @@
                     console.log("Error logging in");
                 }
                 else {
-                    console.log("It should have logged you in");
-                    console.log(user)
-		}
-                $location.path('/messages');
+                    console.log("You're logged in");
+                }
+                $window.location.href = '#/messages';
 
 
             } else {
