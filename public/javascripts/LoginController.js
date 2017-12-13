@@ -96,7 +96,8 @@
                 }
                 else {
                     console.log("It should have logged you in");
-                }
+                    console.log(user)
+		}
                 $location.path('/messages');
 
 

@@ -7,7 +7,7 @@
     console.log("Message controller");
 
     $scope.getMessages = function(user) {
-        var route = 'message/' + user;
+        var route = 'message/' + loginService.getUser().email;
         $http.get(route).then(function (resp) {
             rtn.messages = resp.data;
         });
@@ -60,7 +60,7 @@
 	}
 
     $scope.getUserDisplayName = function() {
-        return loginService.getUser().displayName;
+        return loginService.getUser().email;
     }
 	
 	$scope.toggleMessage = function (index) {
