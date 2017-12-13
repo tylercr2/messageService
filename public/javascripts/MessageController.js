@@ -47,6 +47,7 @@
 
     $scope.logout = function () {
         loginService.logout();
+        firebase.auth().signOut();
         $location.path("/login");
     }
 
